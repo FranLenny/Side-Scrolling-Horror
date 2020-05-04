@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\phoneController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Name/Documents/GitHub/Side-Scrolling-Horror/SideScrollingHorror/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
