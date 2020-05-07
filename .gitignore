@@ -1061,3 +1061,5 @@ SideScrollingHorror/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
 SideScrollingHorror/SideScrollingHorror.sln
 SideScrollingHorror/Temp/__Backupscenes/0.backup
 *.json
+*.json
+*.log
