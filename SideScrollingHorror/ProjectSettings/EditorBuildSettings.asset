@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 8290d4b8d4748ff45b3996f9bd015f4c
+  - enabled: 1
+    path: Assets/Scenes/neverEndingRoad.unity
+    guid: cc427d36c32c0214593dac03d7b9ded6
   m_configObjects: {}
