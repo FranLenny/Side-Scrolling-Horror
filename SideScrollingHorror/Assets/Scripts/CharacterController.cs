@@ -9,10 +9,15 @@ public class CharacterController : MonoBehaviour
     private bool facingRight = true;
     public float speed;
 
+    public float inForestSpeed;
+
+    private static bool playerInForest;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -29,8 +34,33 @@ public class CharacterController : MonoBehaviour
         {
             Flip();
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (playerInForest)
+            {
+                inRoad();
+            }
+            else
+            {
+                inForest();
+            }
+        }
     }
 
+    void inForest()
+    {
+        //transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        speed = inForestSpeed;
+        playerInForest = true;
+    }
+
+    void inRoad()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
+        //speed = speed;
+    }
 
     void Flip()
     {
