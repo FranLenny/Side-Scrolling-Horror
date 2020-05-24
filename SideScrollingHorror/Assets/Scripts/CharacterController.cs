@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     private bool facingRight = true;
-    public float speed;
 
+    public float speed;
+    public float initialSpeed;
     public float inForestSpeed;
 
-    private static bool playerInForest;
+    private static bool playerInForest = false;
+
+    float timeLeft = 10f;
+    
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
 
@@ -25,6 +31,15 @@ public class CharacterController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(moveHorizontal * speed, rb2d.velocity.y);
+
+        if (playerInForest)
+        {
+            timeLeft -= Time.deltaTime;
+            if (timeLeft < 0)
+            {
+                SceneManager.LoadScene("loseScreen");
+            }
+        }
 
         if (facingRight == false && moveHorizontal > 0)
         {
@@ -59,7 +74,9 @@ public class CharacterController : MonoBehaviour
     void inRoad()
     {
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
-        //speed = speed;
+        speed = initialSpeed;
+        playerInForest = false;
+        timeLeft = 10f;
     }
 
     void Flip()

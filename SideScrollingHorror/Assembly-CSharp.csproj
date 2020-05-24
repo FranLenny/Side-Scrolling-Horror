@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\cameraController.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\deathScreenTimer.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\phoneController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

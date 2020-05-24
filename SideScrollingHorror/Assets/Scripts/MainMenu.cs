@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public void startGame()
-   {
+
+    public void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void startGame()
+    {
         SceneManager.LoadScene("neverEndingRoad");
-   }
+    }
 
     public void instructions()
     {

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/neverEndingRoad.unity
     guid: cc427d36c32c0214593dac03d7b9ded6
+  - enabled: 1
+    path: Assets/Scenes/loseScreen.unity
+    guid: caff4e47cbfc2a446af6ddc17a665c41
   m_configObjects: {}
